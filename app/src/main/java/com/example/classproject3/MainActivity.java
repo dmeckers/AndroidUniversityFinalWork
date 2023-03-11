@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import com.example.classproject3.fragments.AdvancedJsonFragment;
 import com.example.classproject3.fragments.HomeFragment;
 import com.example.classproject3.fragments.HomeWorkJsonFragment;
+import com.example.classproject3.fragments.WallpaperFragment;
 import com.example.classproject3.models.Person;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -57,14 +58,11 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     private void startWallpaperFragment() {
-//                startFragment(new WallpaperFragment());
+                startFragment(new WallpaperFragment());
 
     }
 
     private void startHomeFragment() {
-
-
-
 
         startFragment(new HomeFragment());
     }
