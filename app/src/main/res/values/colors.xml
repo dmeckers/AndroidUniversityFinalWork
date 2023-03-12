@@ -11,6 +11,10 @@
 
     <color name="greyed_out">#a6a6a6</color>
     <color name="almost_white">#FCFCFC</color>
+    <color name="violet_500">#563D87</color>
+    <color name="header_background">#b5afc4</color>
+    <color name="background_c">#ddd8e8</color>
+    <color name="almostBlack">#404744</color>
 
     <color name="activated">#293173</color>
 </resources>

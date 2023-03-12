@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.classproject3.fragments.AdvancedJsonFragment;
+import com.example.classproject3.fragments.FirstHomeworkJsonFragment;
 import com.example.classproject3.fragments.HomeFragment;
 import com.example.classproject3.fragments.HomeWorkJsonFragment;
 import com.example.classproject3.fragments.WallpaperFragment;
@@ -21,9 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
     
     public static String url = "https://sinka.lv/android_end_work.html";
-    public static String apiKey = "4GI2ZJDezFFqYuZkhYn4jEiKk96IudKvNQVkYgXhusx029tSIevCJdUw";
-    public static String baseUrl = "https://api.pexels.com/v1/search";
-    private static String clientId = "535449202354-n92u1tdl266bog901fph7vt524iieck0.apps.googleusercontent.com";
+    public static String urlPosts = "https://jsonplaceholder.typicode.com/posts";
+
+//    public static String apiKey = "4GI2ZJDezFFqYuZkhYn4jEiKk96IudKvNQVkYgXhusx029tSIevCJdUw";
+//    public static String baseUrl = "https://api.pexels.com/v1/search";
+//    private static String clientId = "535449202354-n92u1tdl266bog901fph7vt524iieck0.apps.googleusercontent.com";
 
     BottomNavigationView bottomNavigationView;
 
@@ -53,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 startFragment(new AdvancedJsonFragment());
     }
 
-//    private void startJsonHomeworkFragment() {
-//                startFragment(new HomeWorkJsonFragment());
-//    }
+    private void startJsonHomeworkFragment() {
+                startFragment(new FirstHomeworkJsonFragment());
+    }
 
     private void startWallpaperFragment() {
                 startFragment(new WallpaperFragment());
@@ -63,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startHomeFragment() {
-
         startFragment(new HomeFragment());
     }
 
@@ -98,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.nav_json_homework:
                     {
-//                        startJsonHomeworkFragment();
+                        startJsonHomeworkFragment();
                         return true;
                     }
                     case R.id.nav_json_advanced:{
@@ -109,18 +111,12 @@ public class MainActivity extends AppCompatActivity {
                         startLuckyChoiceFragment();
                         return true;
                     }
-
-
                 }
-
-
             return false;
             }
 
         });
-
         startHomeFragment();
         bottomNavigationView.getMenu().getItem(0).setChecked(true);
-
     }
 }

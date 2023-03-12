@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/almostBlack"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/background_c"
+        android:paddingHorizontal="10dp">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Back"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/header_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="false"
+            android:background="@drawable/background_circle_custom"
+            android:scaleType="centerInside"
+            android:src="@drawable/baseline_sports_football_24" />
+
+
+        <TextView
+            android:id="@+id/title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
+            android:layout_toLeftOf="@id/back_button"
+            android:layout_toRightOf="@id/header_icon"
+            android:text="Cool post title !!!"
+            android:ellipsize="end"
+            android:textColor="@color/almostBlack"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:id="@+id/hsv_layout">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/almost_white"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:text="Post nr . Author dr ."
+                android:paddingVertical="5dp"
+                android:paddingLeft="5dp"
+                android:textSize="14dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:id="@+id/post_body"
+                android:text="Some post text"
+                android:textSize="18dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expand"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:id="@+id/button_expand"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
