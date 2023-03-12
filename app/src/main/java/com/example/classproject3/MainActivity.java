@@ -12,6 +12,7 @@ import com.example.classproject3.fragments.AdvancedJsonFragment;
 import com.example.classproject3.fragments.FirstHomeworkJsonFragment;
 import com.example.classproject3.fragments.HomeFragment;
 import com.example.classproject3.fragments.HomeWorkJsonFragment;
+import com.example.classproject3.fragments.LuckyChoiceFragment;
 import com.example.classproject3.fragments.WallpaperFragment;
 import com.example.classproject3.models.Person;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,7 +21,8 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
-    
+
+    public static final String DELAY_KEY = "2";
     public static String url = "https://sinka.lv/android_end_work.html";
     public static String urlPosts = "https://jsonplaceholder.typicode.com/posts";
 
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
     private void startLuckyChoiceFragment() {
-//                startFragment(new ChoiceLuckyFragment());
+                startFragment(new LuckyChoiceFragment());
     }
 
     private void startJsonAdvancedFragment() {
