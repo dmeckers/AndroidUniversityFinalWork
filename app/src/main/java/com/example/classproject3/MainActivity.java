@@ -12,6 +12,7 @@ import com.example.classproject3.fragments.AdvancedJsonFragment;
 import com.example.classproject3.fragments.FirstHomeworkJsonFragment;
 import com.example.classproject3.fragments.HomeFragment;
 import com.example.classproject3.fragments.HomeWorkJsonFragment;
+import com.example.classproject3.fragments.LuckyChoiceFragment;
 import com.example.classproject3.fragments.WallpaperFragment;
 import com.example.classproject3.models.Person;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
     private void startLuckyChoiceFragment() {
-//                startFragment(new ChoiceLuckyFragment());
+                startFragment(new LuckyChoiceFragment());
     }
 
     private void startJsonAdvancedFragment() {

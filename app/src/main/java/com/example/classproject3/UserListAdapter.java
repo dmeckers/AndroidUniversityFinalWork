@@ -1,5 +1,6 @@
 package com.example.classproject3;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +55,8 @@ public class UserListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+
 
 
 
@@ -70,8 +72,12 @@ public class UserListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             });
             String name = list.get(position).getName();
             ((ItemPersonOneViewHolder) holder).name.setText(name);
-            ((ItemPersonOneViewHolder) holder).phone.setText("Mobile:" + list.get(position).getPhoneList().getMobile());
-            ((ItemPersonOneViewHolder) holder).song.setText(list.get(position).getSongPlaylist().get(0));
+
+            ((ItemPersonOneViewHolder) holder).phone.setText("Mobile:" + list.get(holder.getAdapterPosition()).getPhoneList().getMobile());
+            ((ItemPersonOneViewHolder) holder).song.setText(list.get(holder.getAdapterPosition()).getSongPlaylist().get(0));
+
+//            ((ItemPersonOneViewHolder) holder).phone.setText("Mobile:" + list.get(position).getPhoneList().getMobile());
+//            ((ItemPersonOneViewHolder) holder).song.setText(list.get(position).getSongPlaylist().get(0));
             ((ItemPersonOneViewHolder) holder).icon.setImageResource(R.drawable.baseline_person_24);
 
         }
@@ -85,15 +91,19 @@ public class UserListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 }
             });
 
-            ((ItemPersonTwoViewHolder) holder).name.setText(list.get(position).getName());
-            ((ItemPersonTwoViewHolder) holder).phone.setText("Mobile" + list.get(position).getPhoneList().getMobile());
+
+            ((ItemPersonTwoViewHolder) holder).name.setText(list.get(holder.getAdapterPosition()).getName());
+            ((ItemPersonTwoViewHolder) holder).phone.setText("Mobile" + list.get(holder.getAdapterPosition()).getPhoneList().getMobile());
+
+//            ((ItemPersonTwoViewHolder) holder).name.setText(list.get(position).getName());
+//            ((ItemPersonTwoViewHolder) holder).phone.setText("Mobile" + list.get(position).getPhoneList().getMobile());
 
 
-            if(Integer.parseInt( list.get(position).getId()) % 3 == 0){
+            if(Integer.parseInt( list.get(holder.getAdapterPosition()).getId()) % 3 == 0){
                 ((ItemPersonTwoViewHolder) holder).icon.setImageResource(R.drawable.baseline_image_24);
-            }else if(Integer.parseInt( list.get(position).getId()) % 3 == 1){
+            }else if(Integer.parseInt( list.get(holder.getAdapterPosition()).getId()) % 3 == 1){
                 ((ItemPersonTwoViewHolder) holder).icon.setImageResource(R.drawable.baseline_data_object_24);
-            }else if(Integer.parseInt( list.get(position).getId()) % 3 == 2){
+            }else if(Integer.parseInt( list.get(holder.getAdapterPosition()).getId()) % 3 == 2){
                 ((ItemPersonTwoViewHolder) holder).icon.setImageResource(R.drawable.baseline_home_24);
             }
         }
