@@ -17,12 +17,17 @@ package com.example.classproject3;
         import androidx.annotation.NonNull;
         import androidx.recyclerview.widget.RecyclerView;
 
+        import com.example.classproject3.models.Card;
+
         import java.io.FileNotFoundException;
         import java.util.ArrayList;
 
 public class MusicListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     ArrayList<String> list;
+
+
+
     int viewType;
     Context context;
 
